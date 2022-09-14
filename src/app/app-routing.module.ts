@@ -14,7 +14,6 @@ const routes: Routes = [
       {path:'update/:id' , component: EditTaskComponent}
     ]
   },
-  {path:'add', component: AddComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,26 @@
+.gradient-custom-2 {
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(
+      to right,
+      rgba(150, 100, 200, 1),
+      rgba(200, 200, 255, 1)
+    );
+  }
+  
+  .mask-custom {
+    background: rgba(24, 24, 16, 0.2);
+     border-radius: 2em;
+   /* backdrop-filter: blur(25px);*/
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03); 
+  }
+
+  .plus-icon{
+    background: rgba(24, 24, 16, 0.2);
+     border-radius: 4em;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    margin-left: 0px;
+  }

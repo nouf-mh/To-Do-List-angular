@@ -1,0 +1,52 @@
+<app-search-box (term)="onKeyupSearch($event)"></app-search-box>
+
+<table class="table text-white mb-0">
+  <thead>
+    <tr>
+      <th scope="col">Task</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="fw-normal" *ngFor="let item of tasks | customFiltter: term">
+      <td class="align-middle" [appDeleteText]="item.value">
+        <input
+              type="checkbox"
+              class="form-check-input me-1"
+              [(ngModel)]="item.value"
+            />
+        <span>{{ item.title }}</span>
+      </td>
+      <td class="align-middle ">
+        <h6 class="mb-0">
+          <span *ngIf="item.priority === 'High'" class="badge bg-danger"
+            >High priority</span
+          >
+          <span *ngIf="item.priority === 'Middle'" class="badge bg-warning"
+            >Middle priority</span
+          >
+          <span *ngIf="item.priority === 'Low'" class="badge bg-success"
+            >Low priority</span
+          >
+        </h6>
+      </td>
+      <td class="align-middle">
+        <a
+          href="#!"
+          data-mdb-toggle="tooltip"
+          title="Done"
+          [routerLink]="['/update', item.id]"
+          ><i class="bi bi-pen-fill bi-lg text-primary me-3"></i
+        ></a>
+        <a
+          href="#!"
+          data-mdb-toggle="tooltip"
+          title="Remove"
+          (click)="onDeleteTask(item)"
+          ><i class="bi bi-trash text-warning"></i
+        ></a>
+      </td>
+    </tr>
+  </tbody>
+</table>

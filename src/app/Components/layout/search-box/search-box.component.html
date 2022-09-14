@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-4">
+    <div class="input-group mb-3 mask-custom">
+      <span class="input-group-text mask-custom text-white" id="basic-addon1">
+        <i class="bi bi-search"></i>
+      </span>
+      <input
+        type="text"
+        class="mask-custom form-control"
+        [(ngModel)]="termSearch"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="basic-addon1"
+        (keyup)="onKeyupSearch()"
+        
+      />
+    </div>
+  </div>
+  <div class="col-8">
+    <app-add></app-add>
+  </div>
+</div>
